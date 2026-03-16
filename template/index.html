@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse String</title>    
+<meta charset="UTF-8">
+<title>Reverse String-Jonathan Palacio</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f3f3f3;
+}
+
+.container{
+    width:500px;
+    margin:80px auto;
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:4px;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.btn-reverse{
+    background:#28a745;
+    color:white;
+    margin-top:10px;
+}
+
+.btn-copy{
+    background:#6c757d;
+    color:white;
+    margin-top:10px;
+}
+
+.result{
+    margin-top:15px;
+    font-size:18px;
+}
+</style>
+
 </head>
+
 <body>
-<script src="script.js"></script>
+
+<div class="container">
+
+<h2>Reverse String</h2>
+
+<input type="text" id="texto" placeholder="Ingrese un texto">
+
+<br>
+
+<button class="btn-reverse" onclick="invertirTexto()">Reverse</button>
+
+<div class="result" id="resultado"></div>
+
+<button class="btn-copy" onclick="copiarTexto()">Copy</button>
+
+</div>
+
+<script>
+
+function invertirTexto() {
+
+    let texto = document.getElementById("texto").value;
+
+    let invertido = texto.split("").reverse().join("");
+
+    document.getElementById("resultado").innerText = invertido;
+
+}
+
+function copiarTexto(){
+
+    let resultado = document.getElementById("resultado").innerText;
+
+    navigator.clipboard.writeText(resultado);
+
+}
+
+</script>
+
 </body>
 </html>

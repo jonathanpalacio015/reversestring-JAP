@@ -1,1 +1,1 @@
-
+necesito que actúes como el mejor grupo de desarrollo, para lo cual necesito Crear una página web con lógica en javascript que invierta el orden de una cadena de texto. y que tenga una interfaz html similar a la que adjunto con boton color verde
